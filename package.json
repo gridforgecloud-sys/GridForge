@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npx wrangler pages deploy out",
     "start": "next start",
     "lint": "next lint"
   },
@@ -26,8 +27,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.40",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.5",
-    "@cloudflare/next-on-pages": "^1.9.5"
+    "eslint-config-next": "^14.2.5"
   }
 }
 
