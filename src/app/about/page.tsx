@@ -20,7 +20,7 @@ export default function AboutPage() {
                 About GridForge
               </h1>
               <p className="text-xl text-gray-600">
-                {companyInfo.fullName}
+                {companyInfo.name}
               </p>
             </div>
           </FadeIn>
@@ -49,8 +49,8 @@ export default function AboutPage() {
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">What GridForge Means</h2>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  "Grid" represents our powerful grid computing capabilities, enabling us to integrate distributed computing resources into unified, powerful computational force.
-                  "Forge" symbolizes our commitment—meticulously crafting and optimizing computing solutions that transform raw computational resources into your strategic advantage.
+                  &ldquo;Grid&rdquo; represents our powerful grid computing capabilities, enabling us to integrate distributed computing resources into unified, powerful computational force.
+                  &ldquo;Forge&rdquo; symbolizes our commitment—meticulously crafting and optimizing computing solutions that transform raw computational resources into your strategic advantage.
                 </p>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   Just as a blacksmith forges steel, we forge computational power, providing a solid technical foundation for your AI projects.
@@ -70,7 +70,7 @@ export default function AboutPage() {
 
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-12">Contact Us</h2>
                 <p className="text-lg text-gray-600 mb-4">
-                  If you're interested in our services or would like to learn more, please don't hesitate to reach out to us.
+                  If you&apos;re interested in our services or would like to learn more, please don&apos;t hesitate to reach out to us.
                 </p>
                 <p className="text-lg text-gray-600">
                   Email:{" "}

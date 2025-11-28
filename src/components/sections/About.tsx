@@ -66,7 +66,7 @@ export function About() {
                   {companyInfo.tagline}
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  "Forge" represents our commitment to crafting powerful computing solutions that transform raw computational resources into strategic advantages.
+                  &ldquo;Forge&rdquo; represents our commitment to crafting powerful computing solutions that transform raw computational resources into strategic advantages.
                 </p>
                 <div className="pt-6 border-t border-gray-700">
                   <div className="flex items-center gap-3 text-gray-300">

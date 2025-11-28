@@ -65,9 +65,9 @@ export function Contact() {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
                 <div className="space-y-6">
-                  <div className="text-6xl font-black text-white/20">"</div>
+                  <div className="text-6xl font-black text-white/20">&ldquo;</div>
                   <p className="text-xl text-white leading-relaxed">
-                    Transform your AI infrastructure with GridForge's cutting-edge solutions. From compute to cloud, we forge the foundation for your success.
+                    Transform your AI infrastructure with GridForge&apos;s cutting-edge solutions. From compute to cloud, we forge the foundation for your success.
                   </p>
                   <div className="flex items-center gap-4 pt-6 border-t border-white/20">
                     <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">

@@ -52,7 +52,7 @@ export default function ContactPage() {
                 Contact Us
               </h1>
               <p className="text-xl text-gray-600">
-                We'd love to hear from you and are ready to help
+                We&apos;d love to hear from you and are ready to help
               </p>
             </div>
           </FadeIn>
@@ -144,7 +144,7 @@ export default function ContactPage() {
 
                   {submitStatus === "success" && (
                     <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-                      Message sent! We'll get back to you soon.
+                      Message sent! We&apos;ll get back to you soon.
                     </div>
                   )}
 
