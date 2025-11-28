@@ -1,0 +1,53 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1E293B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3B82F6" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+    <radialGradient id="glow1" cx="25%" cy="25%" r="50%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="75%" cy="75%" r="50%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background gradient -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Glowing circles -->
+  <circle cx="480" cy="270" r="400" fill="url(#glow1)"/>
+  <circle cx="1440" cy="810" r="400" fill="url(#glow2)"/>
+  
+  <!-- Circuit-like lines -->
+  <g opacity="0.2" stroke="#3B82F6" stroke-width="2" fill="none">
+    <path d="M 200 200 Q 400 300, 600 200 T 1000 200" stroke-dasharray="10,5"/>
+    <path d="M 1200 400 Q 1400 500, 1600 400 T 1800 400" stroke-dasharray="10,5"/>
+    <path d="M 300 700 Q 500 800, 700 700 T 1100 700" stroke-dasharray="10,5"/>
+    <path d="M 1300 900 Q 1500 1000, 1700 900" stroke-dasharray="10,5"/>
+  </g>
+  
+  <!-- Nodes/connection points -->
+  <g opacity="0.3" fill="#3B82F6">
+    <circle cx="200" cy="200" r="4"/>
+    <circle cx="600" cy="200" r="4"/>
+    <circle cx="1000" cy="200" r="4"/>
+    <circle cx="1200" cy="400" r="4"/>
+    <circle cx="1600" cy="400" r="4"/>
+    <circle cx="300" cy="700" r="4"/>
+    <circle cx="700" cy="700" r="4"/>
+    <circle cx="1100" cy="700" r="4"/>
+    <circle cx="1300" cy="900" r="4"/>
+    <circle cx="1700" cy="900" r="4"/>
+  </g>
+</svg>
+
