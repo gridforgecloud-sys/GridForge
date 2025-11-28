@@ -3,9 +3,8 @@ import { Section } from "@/components/ui/Section";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { companyInfo } from "@/lib/constants";
 import { siteConfig } from "@/config/site";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "About Us",
   description: `Learn about ${companyInfo.name} - Leading AI infrastructure solutions provider for the EMEA region`,
 };
