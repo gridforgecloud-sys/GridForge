@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Static export for Cloudflare Pages
+  output: 'export',
   images: {
-    domains: ['gridforgeai.com'],
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  trailingSlash: false,
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
