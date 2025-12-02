@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { siteConfig } from "@/config/site";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, User } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -181,6 +181,31 @@ export default function ContactPage() {
                   <div className="space-y-6">
                     <div className="flex items-start">
                       <div className="p-3 rounded-lg bg-primary-50 text-primary-600 mr-4">
+                        <User className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-1">Contact Person</h3>
+                        <p className="text-gray-600">Ethan Ting</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="p-3 rounded-lg bg-primary-50 text-primary-600 mr-4">
+                        <Phone className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-1">Contact Number</h3>
+                        <a
+                          href="tel:+60197720526"
+                          className="text-primary-600 hover:text-primary-700 transition-colors"
+                        >
+                          +60197720526
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="p-3 rounded-lg bg-primary-50 text-primary-600 mr-4">
                         <Mail className="h-6 w-6" />
                       </div>
                       <div>
@@ -199,12 +224,11 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
+                        <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
                         <p className="text-gray-600">
-                          {siteConfig.location.country}
-                        </p>
-                        <p className="text-gray-600">
-                          Service Region: {siteConfig.location.region}
+                          5-2 (Level 2, Room 19), Jalan Kuchai Maju 8, Off,<br />
+                          Jalan Kuchai Lama, 58200 Kuala Lumpur,<br />
+                          Wilayah Persekutuan Kuala Lumpur
                         </p>
                       </div>
                     </div>
