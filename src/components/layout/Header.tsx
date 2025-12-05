@@ -19,10 +19,11 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="flex items-center">
-              <span className="text-2xl font-black text-primary-400 group-hover:text-primary-300 transition-colors">Grid</span>
-              <span className="text-2xl font-black text-white">Forge</span>
-            </div>
+            <img 
+              src="/images/logo(1).png" 
+              alt="GridForge Logo" 
+              className="h-14 md:h-16 w-auto brightness-0 invert transition-opacity group-hover:opacity-80 scale-[1.1]"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,16 +52,25 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-gray-800 py-4 bg-gray-900/98">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-base font-medium text-gray-300 hover:text-primary-400 transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              ))}
+              {navItems.map((item) =>
+                item.disabled ? (
+                  <span
+                    key={item.title}
+                    className="text-base font-medium text-gray-500 cursor-not-allowed select-none"
+                  >
+                    {item.title}
+                  </span>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-base font-medium text-gray-300 hover:text-primary-400 transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
+                )
+              )}
               <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="w-full">
                 <Button size="sm" className="w-full bg-primary-600 hover:bg-primary-700 text-white">Contact Us</Button>
               </Link>

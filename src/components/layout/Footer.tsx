@@ -17,8 +17,11 @@ export function Footer() {
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
               <Link href="/" className="flex items-center space-x-2 mb-4 group">
-                <span className="text-xl font-black text-primary-400 group-hover:text-primary-300 transition-colors">Grid</span>
-                <span className="text-xl font-black text-white">Forge</span>
+                <img
+                  src="/images/logo(1).png"
+                  alt="GridForge Logo"
+                  className="h-14 md:h-16 w-auto brightness-0 invert transition-opacity group-hover:opacity-80 scale-[1.1]"
+                />
               </Link>
               <p className="text-gray-400 text-sm mb-4 max-w-md">
                 {siteConfig.fullName}

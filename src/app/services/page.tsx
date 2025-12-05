@@ -9,33 +9,76 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export default function ServicesPage() {
+  const serviceImages: Record<string, string> = {
+    "server-compute": "/images/services/server-compute.jpg",
+    "cloud-hosting": "/images/services/cloud-hosting.jpg",
+    "data-pipeline": "/images/services/data-pipeline.jpg",
+    devops: "/images/services/devops.jpg",
+    "grid-computing": "/images/services/grid-computing.jpg",
+  };
+
   return (
     <>
-      <Section background="primary" className="pt-24">
+      <div className="relative min-h-[60vh] flex items-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/hero-bg.svg" 
+            alt="GridForge background" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center' }}
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-primary-900/80"></div>
+        </div>
+
+        {/* Background accents (static, lower opacity) */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        </div>
+
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+        {/* Center logo overlay */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img
+            src="/images/logo(1).png"
+            alt="GridForge Logo"
+            className="h-[60%] w-auto opacity-[0.08]"
+          />
+        </div>
+
+        <div className="relative z-10 w-full">
         <Container>
           <FadeIn>
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <div className="max-w-3xl mx-auto text-center py-20 md:py-32">
+                <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
                 Our Services
               </h1>
-              <p className="text-xl text-gray-600">
+                <p className="text-xl md:text-2xl text-gray-300">
                 Comprehensive infrastructure solutions for your AI projects
               </p>
             </div>
           </FadeIn>
         </Container>
-      </Section>
+        </div>
+      </div>
 
       <Section background="white">
         <Container>
           <div className="space-y-24">
             {services.map((service, index) => {
               const Icon = service.icon;
+              const imageFirst = index % 2 === 1; // alternate layout
+              const contentOrder = imageFirst ? "order-1 lg:order-2" : "order-1 lg:order-1";
+              const imageOrder = imageFirst ? "order-2 lg:order-1" : "order-2 lg:order-2";
               return (
                 <div key={service.id} id={service.id} className="scroll-mt-24">
                   <FadeIn delay={index * 0.1}>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                      <div>
+                      <div className={contentOrder}>
                         <div className="flex items-center mb-6">
                           <div className="p-4 rounded-xl bg-primary-100 text-primary-600">
                             <Icon className="h-8 w-8" />
@@ -61,10 +104,15 @@ export default function ServicesPage() {
                           </ul>
                         </div>
                       </div>
-                      <Card className="h-full">
+                      <Card className={imageOrder}>
                         <div className="p-8">
-                          <div className="aspect-video bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg flex items-center justify-center mb-6">
-                            <Icon className="h-16 w-16 text-primary-600" />
+                          <div className="aspect-video rounded-lg overflow-hidden border-2 border-primary-100 mb-6 relative">
+                            <img
+                              src={serviceImages[service.id] ?? "/images/services/grid-computing.jpg"}
+                              alt={service.title}
+                              className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                           </div>
                           <h3 className="text-2xl font-bold text-gray-900 mb-4">
                             {service.shortTitle}

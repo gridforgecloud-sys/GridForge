@@ -50,7 +50,10 @@ export function About() {
               </div>
 
               <Link href="/about">
-                <Button size="lg" className="bg-primary-600 hover:bg-primary-700">
+                <Button
+                  size="lg"
+                  className="bg-primary-600 hover:bg-primary-700 transition-none hover:shadow-none"
+                >
                   Learn More
                 </Button>
               </Link>

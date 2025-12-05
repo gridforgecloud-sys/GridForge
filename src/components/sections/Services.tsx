@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export function Services() {
+  const serviceImages: Record<string, string> = {
+    "server-compute": "/images/services/home-server-compute.jpg",
+    "cloud-hosting": "/images/services/home-cloud-hosting.jpg",
+    "data-pipeline": "/images/services/home-data-pipeline.jpg",
+    devops: "/images/services/home-devops.jpg",
+    "grid-computing": "/images/services/home-grid-computing.jpg",
+  };
+
   return (
     <section id="services" className="relative py-24 md:py-32 bg-white">
       {/* Diagonal split background */}
@@ -66,10 +74,13 @@ export function Services() {
                   {/* Visual side */}
                   <div className="flex-1">
                     <div className={`relative ${isEven ? 'md:ml-auto' : 'md:mr-auto'} max-w-md`}>
-                      <div className={`bg-gradient-to-br ${isEven ? 'from-gray-100 to-gray-200' : 'from-primary-50 to-primary-100'} rounded-2xl p-8 border-2 ${isEven ? 'border-gray-200' : 'border-primary-200'}`}>
-                        <div className="aspect-square flex items-center justify-center">
-                          <Icon className={`h-24 w-24 ${isEven ? 'text-gray-400' : 'text-primary-400'}`} />
-                        </div>
+                      <div className="aspect-square rounded-2xl overflow-hidden border-2 border-gray-200 shadow-md">
+                        <img
+                          src={serviceImages[service.id] ?? "/images/services/grid-computing.jpg"}
+                          alt={service.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
                       </div>
                       {/* Decorative element */}
                       <div className={`absolute -z-10 ${isEven ? '-bottom-4 -right-4' : '-bottom-4 -left-4'} w-full h-full bg-gray-200 rounded-2xl`}></div>

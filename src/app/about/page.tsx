@@ -12,20 +12,52 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Section background="primary" className="pt-24">
+      <div className="relative min-h-[60vh] flex items-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/hero-bg.svg" 
+            alt="GridForge background" 
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center' }}
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-primary-900/80"></div>
+        </div>
+
+        {/* Background accents (static, lower opacity) */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        </div>
+
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+        {/* Center logo overlay */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img
+            src="/images/logo(1).png"
+            alt="GridForge Logo"
+            className="h-[60%] w-auto opacity-[0.08]"
+          />
+        </div>
+
+        <div className="relative z-10 w-full">
         <Container>
           <FadeIn>
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <div className="max-w-3xl mx-auto text-center py-20 md:py-32">
+                <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
                 About GridForge
               </h1>
-              <p className="text-xl text-gray-600">
+                <p className="text-xl md:text-2xl text-gray-300">
                 {companyInfo.name}
               </p>
             </div>
           </FadeIn>
         </Container>
-      </Section>
+        </div>
+      </div>
 
       <Section background="white">
         <Container>
