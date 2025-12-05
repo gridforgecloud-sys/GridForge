@@ -74,7 +74,7 @@ export function Services() {
                   {/* Visual side */}
                   <div className="flex-1">
                     <div className={`relative ${isEven ? 'md:ml-auto' : 'md:mr-auto'} max-w-md`}>
-                      <div className="aspect-square rounded-2xl overflow-hidden border-2 border-gray-200 shadow-md">
+                      <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-gray-200 shadow-md">
                         <img
                           src={serviceImages[service.id] ?? "/images/services/grid-computing.jpg"}
                           alt={service.title}
