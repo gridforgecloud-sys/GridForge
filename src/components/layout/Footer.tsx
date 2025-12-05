@@ -45,13 +45,19 @@ export function Footer() {
               <h3 className="font-bold text-white mb-4">Quick Links</h3>
               <ul className="space-y-3">
                 {navItems.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
-                    >
-                      {item.title}
-                    </Link>
+                  <li key={item.href || item.title}>
+                    {item.disabled ? (
+                      <span className="text-sm text-gray-500 cursor-not-allowed select-none">
+                        {item.title}
+                      </span>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
+                      >
+                        {item.title}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
